@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.links line {
+  stroke: #999;
+  stroke-opacity: 0.6;
+}
+
+.nodes circle {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+</style>
+<svg width="960" height="600"></svg>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+
+var FibonacciHeap = function (customCompare) {
+  this.minNode = undefined;
+  this.rootList = undefined;
+  this.nodeCount = 0;
+  this.sizeOfRootList = 0; 
+  this.numberOfMarkedNodes = 0;
+  this.potential = 0;
+
+  if (customCompare) {
+    this.compare = customCompare;
+  }
+};
+
+FibonacciHeap.prototype.decreaseKey = function (node, key) {
+  
+  if (this.compare(key, node.key) > 0) {
+    throw new Error('New key is larger than old key');
+  } 
+
+  node.key = key;
+  let parent = node.parent;
+  if (parent && this.compare(node, parent) < 0) {
+    cut(node, parent, this.minNode, this.compare);
+    cascadingCut(parent, this.minNode, this.compare);
+  }
+  if (this.compare(node, this.minNode) < 0) {
+    this.minNode = node;
+  }
+};
+
+function Node(key, value) {
+  this.key = key;
+  this.prev = this;
+  this.next = this;
+  this.degree = 0;
+
+  this.parent = undefined;
+  this.child = undefined;
+  this.isMrkd = undefined;
+}
+
+function Meld(head1, head2) {
+  if 
+}
+
+</script>
+}
