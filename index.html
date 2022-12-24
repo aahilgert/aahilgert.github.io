@@ -1,66 +1,66 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<style>
+<html><head>
 
-.links line {
-  stroke: #999;
-  stroke-opacity: 0.6;
-}
 
-.nodes circle {
-  stroke: #fff;
-  stroke-width: 1.5px;
-}
+<link href="myfonts.css" rel="stylesheet" type="text/css">
+<title>Arthur Ayestas Hilgert's Home Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Arthur Ayestas Hilgert">
+<meta name="classification" content="Personal home page">
+<meta name="copyright" content="Arthur Ayestas Hilgert">
+<meta name="distribution" content="global">
 
-</style>
-<svg width="960" height="600"></svg>
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script>
 
-var FibonacciHeap = function (customCompare) {
-  this.minNode = undefined;
-  this.rootList = undefined;
-  this.nodeCount = 0;
-  this.sizeOfRootList = 0; 
-  this.numberOfMarkedNodes = 0;
-  this.potential = 0;
 
-  if (customCompare) {
-    this.compare = customCompare;
-  }
-};
+<style type="text/css"></style></head>
+<body bgcolor="white" text="black">
 
-FibonacciHeap.prototype.decreaseKey = function (node, key) {
-  
-  if (this.compare(key, node.key) > 0) {
-    throw new Error('New key is larger than old key');
-  } 
+<font class="regular">
+<font class="regular">
+</font><table cellpadding="0" cellspacing="10" border="0">
+<tbody><tr>
+<td valign="top" colspan="2">
 
-  node.key = key;
-  let parent = node.parent;
-  if (parent && this.compare(node, parent) < 0) {
-    cut(node, parent, this.minNode, this.compare);
-    cascadingCut(parent, this.minNode, this.compare);
-  }
-  if (this.compare(node, this.minNode) < 0) {
-    this.minNode = node;
-  }
-};
+</td>
+</tr><tr>
+<td valign="top">
+<p align="right">
+<font class="bold">HOME PAGE</font>
+</p>
+</td>
+<td valign="top" halign="right">
+</td></tr>
 
-function Node(key, value) {
-  this.key = key;
-  this.prev = this;
-  this.next = this;
-  this.degree = 0;
+<tr>
+<td valign="top">
+<p align="right">
+<font class="bold">Arthur (Arturo) Ayestas Hilgert (me)</font>
+</p>
+</td>
+<td valign="top">
+<font class="regular">
 
-  this.parent = undefined;
-  this.child = undefined;
-  this.isMrkd = undefined;
-}
 
-function Meld(head1, head2) {
-  if 
-}
+</font></td>
+</tr>
 
-</script>
-}
+<tr>
+<td valign="top" bgcolor="#cccccc" width="21%">
+<hr size="1" noshade="">
+</td>
+<td valign="top" bgcolor="#eeeeee" width="79%">
+<hr size="1" noshade="">
+</td>
+</tr>
+
+
+
+
+
+</tbody></table>
+</font>
+
+
+
+
+</body></html>
+
